@@ -1,0 +1,16 @@
+method 1:-
+
+
+l1=[]
+l2=[]
+l3=[]
+l1=nums1[:m]
+l2=nums2[:n]
+nums1[:]=sorted(l1+l2)
+return nums1
+
+
+
+method 2:-
+nums1[:m] = sorted(nums1[:m] + nums2[:n])
+    return nums1
