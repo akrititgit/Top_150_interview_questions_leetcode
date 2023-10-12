@@ -1,0 +1,9 @@
+def removeDuplicates(self, nums: List[int]) -> int:
+        if len(nums)<3:
+            return len(nums)
+        temp=2 #set 2 becoz count must be atmost2
+        for i in range(2,len(nums)):
+            if nums[i]!=nums[temp-2]:
+                nums[temp]=nums[i]
+                temp+=1
+        return temp
