@@ -1,0 +1,22 @@
+def trap(self, height: List[int]) -> int:
+        ngl=[0]*len(height)
+        ngl[0]=0
+        max1=height[0]
+        for i in range(1,len(height)):
+            ngl[i]=max1
+            max1=max(max1,height[i])
+        
+        ngr=[0]*len(height)
+        ngr[len(height)-1]=0
+        max2=height[len(height)-1]
+        for i in range(len(height)-2,-1,-1):
+            ngr[i]=max2
+            max2=max(max2,height[i])
+        
+        l1=[]
+        l2=[]
+        temp=0
+        for i in range(1,len(ngl)-1):
+            if ngl[i]>height[i] and height[i]<ngr[i]:
+                temp+=min(ngl[i],ngr[i])-height[i]
+        return temp
