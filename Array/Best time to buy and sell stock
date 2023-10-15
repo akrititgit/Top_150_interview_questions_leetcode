@@ -1,0 +1,22 @@
+def maxProfit(self, prices: List[int]) -> int:
+        max1=0
+        # for i in range(len(prices)):
+        #     for j in range(i+1,len(prices)):
+        #         curr=prices[j]-prices[i]
+        #         if (prices[i]<prices[j]):
+        #             max1=max(max1,(prices[j]-prices[i]))
+        #         else:
+        #             i=j
+        #         j+=1
+        # return max1
+        i=0
+        j=1
+        max1=0
+        while(j<len(prices)):
+            curr1=prices[j]-prices[i]
+            if prices[i]<prices[j]:
+                max1=max(max1,curr1)
+            else:
+                i=j
+            j+=1       
+        return max1
