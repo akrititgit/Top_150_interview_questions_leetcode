@@ -1,0 +1,7 @@
+def minimizeArrayValue(self, nums: List[int]) -> int:
+        sum1 = 0
+        res= 0
+        for i in range(len(nums)):
+            sum1 += nums[i]
+            res = max(res,(sum1+i)//(i + 1))
+        return int(res)
