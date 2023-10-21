@@ -1,0 +1,25 @@
+def minOperations(self, nums: List[int]) -> int:
+        # n = len(nums)
+        # ans = n 
+        # s = set()  
+        # for a in nums:
+        #     s.add(a)
+        # unique = list(s)
+        # j = 0  
+        # m = len(unique)  
+        # for i in range(m+1):
+        #     while j < m and unique[j] < unique[i] + n:
+        #         j += 1
+        #     ans = min(ans, n - (j - i))
+        # nums.sort()
+        # n = len(nums)
+        # minOps = float('inf')
+
+        # for i in range(n):
+        #     j = i
+        #     while j < n and nums[j] - nums[i] < n:
+        #         j += 1
+        #     ops = n - (j - i)
+        #     minOps = min(minOps, ops)
+
+        # return minOps
