@@ -1,0 +1,7 @@
+def targetIndices(self, nums: List[int], target: int) -> List[int]:
+        nums.sort()
+        l1=[]
+        for i,n1 in enumerate(nums):
+            if n1==target:
+                l1.append(i)
+        return l1
