@@ -1,0 +1,23 @@
+import copy
+class SnapshotArray:
+    def __init__(self, length: int):
+        self.arr1=[0]*length
+        self.d1={}
+        self.id=0
+
+
+    def set(self, index: int, val: int) -> None:
+        self.arr1[index]=val
+        # print(self.arr1)
+
+    def snap(self) -> int:
+
+        self.d1[self.id]=copy.deepcopy(self.arr1)
+        # print (self.d1)
+        self.id+=1
+        print(self.id)
+        return self.id-1
+        
+
+    def get(self, index: int, snap_id: int) -> int:
+        return self.d1[snap_id][index]
