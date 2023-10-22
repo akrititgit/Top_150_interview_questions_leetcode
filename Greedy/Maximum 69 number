@@ -1,0 +1,12 @@
+def maximum69Number (self, num: int) -> int:
+        l1=[]
+        l2=[]
+        k=0
+        for i in str(num):
+            l1.append(i)
+            print(l1)
+            if k<1 and i=='6':
+                l1.pop()
+                l1.append('9')
+                k+=1
+        return "".join(l1)
