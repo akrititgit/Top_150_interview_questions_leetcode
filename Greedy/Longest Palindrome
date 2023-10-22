@@ -1,0 +1,11 @@
+def longestPalindrome(self, s: str) -> int:
+        d1=Counter(s)
+        sum1=0
+        odd=0
+        for i,j in d1.items():
+            if j%2==0:
+                sum1+=j
+            else:
+                sum1+=(j-1)
+                odd=1
+        return sum1+odd
