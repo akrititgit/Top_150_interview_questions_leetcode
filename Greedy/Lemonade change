@@ -1,0 +1,18 @@
+def lemonadeChange(self, bills: List[int]) -> bool:
+        c=0
+        c1=0
+        for i in range(len(bills)):
+            if (bills[i]==5):
+                c+=1
+            elif(bills[i]==10) and c:
+                c-=1
+                c1+=1
+            elif(bills[i]==20) and ((c and c1) or c>=3):
+                if (c!=0) and (c1!=0):
+                    c1-=1
+                    c-=1
+                elif c>=3:
+                    c-=3
+            else:
+                return False
+        return True
