@@ -1,0 +1,16 @@
+def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        s=0
+        e=0
+        sum1=0
+        max_temp=float('inf')
+        while(e<len(nums)):
+            sum1+=nums[e]
+            while(s<=e and sum1>=target):
+                max_temp=min(max_temp,e-s+1)
+                sum1-=nums[s]
+                s+=1
+            e+=1
+        if max_temp==float('inf'):
+            return 0
+        else:
+            return max_temp
